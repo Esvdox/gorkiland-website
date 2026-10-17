@@ -26,3 +26,5 @@ GitHub Actions проверяет сборку и публикует `dist/clien
 ## Материалы
 
 Фотографии и бренд принадлежат их правообладателям; не предназначены для свободного повторного использования сторонними проектами. Inter распространяется по SIL OFL: `src/assets-font/OFL.txt`. Зависимости сохраняют собственные лицензии.
+
+Homepage revision: four photographic entry points. Dedicated screens use ?page=catalog|solutions|projects|manufacturing|service with RU/EN and direct service anchors, supported on GitHub Pages refresh.

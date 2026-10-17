@@ -60,3 +60,5 @@ Verified flows: ten service links in the top dropdown; jump opens the correct de
 No unresolved P0/P1/P2 findings remain in checked desktop/390 px/320 px states. Existing backend/CRM and full-device/accessibility coverage limits still apply.
 
 final result: passed
+
+Homepage density revision 17.10.2026: removed detailed catalogue, solutions, cases, manufacturing and services from home; dedicated query-addressed screens retain all content. Browser verified 12 catalogue cards and 5 cases after navigation; four image tiles inspected on desktop. Logo and original portfolio retained.
