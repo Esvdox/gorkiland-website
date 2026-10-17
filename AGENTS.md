@@ -2,6 +2,8 @@
 
 ## Approved project decisions
 
+17.10.2026 revision: user supplied an INTAMIN mobile reference and asked for more breathing room and visible additional services at the top. Use a white persistent header, black version of the approved logo, larger white content areas, calmer heading scale, and a Services navigation dropdown with direct anchors. Expand services from public company sources; preserve all ride families and the chosen logo.
+
 17.10.2026: brand ГоркиLand, legal entity ООО «Лабораттория»; no APEX branding. Selected website concept 2 (dark cinematic / lime). Initial abstract G logos rejected. Selected the first of the two latest industrial logo lockups: roller coaster on supports plus dense geometric wordmark (`public/assets/logo.svg`). Preserve that font and emblem. Use original manufacturer portfolio; clearly distinguish manufacturing projects and new offers from opened rides. RU and EN. Separate public GitHub repository and preview, without changing gorkiland.ru. Private strategy/research remains outside this public repository.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.

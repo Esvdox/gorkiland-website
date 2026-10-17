@@ -1,5 +1,7 @@
 # Design QA — 17.10.2026
 
+Latest revision: **more white space and expanded services**, described in the final section below. Its explicit user direction supersedes the initial dark content surfaces; the original hero and approved logo remain the visual foundations.
+
 ## Visual truth and evidence
 
 Selected target: `../../outputs/gorkiland-research-2026-10-17/concepts/02.png` (1487 × 1058 px). User subsequently replaced the abstract G with the first industrial roller-coaster logo lockup, preserving its geometric font. That explicit change supersedes the original header logo.
@@ -37,5 +39,24 @@ No unresolved P0/P1/P2 visual or core interaction findings in the checked states
 - P3: commissioned custom typography could tighten optical fidelity further; approved logo font stays unchanged.
 - Server-side enquiry delivery, CRM, complete product passports, legal publishing package and primary-domain migration remain separate production integrations, disclosed in README.
 - Desktop/phone checks do not replace testing every browser/device combination.
+
+## Latest revision: white space and services
+
+User reference: attached INTAMIN mobile screenshot, `1-Фото-1.jpg` (589 × 1282, including phone/browser UI). It is an editorial/spacing reference, not a pixel-cloning target. Revised visual target: `../../outputs/gorkiland-research-2026-10-17/revision-air/services-target.png` (1487 × 1058). Rendered comparison: `revision-air/services-desktop-final.png`, 1440 × 1024 screenshot at 1440 × 1024 CSS viewport. Target normalized to the same dimensions; `revision-air/services-comparison.png` places target left and implementation right. Both were opened together. Focused logo/header inspection: `revision-air/header-detail.png`.
+
+State: RU, service overview, all descriptions collapsed, navigation closed. Extra evidence: `menu-desktop.png`, `menu-mobile.png`, `relocation-mobile.png`, `direct-link-en-320-final.png`, `home-desktop.png`, `home-mobile.png` in the same revision folder.
+
+Iteration findings and fixes:
+
+- P2: initial services anchor retained an unnecessary strip of the preceding section and placed the title too low. Set scroll padding from the actual sticky header height, reduced the service introduction's top padding and synchronized service hash navigation after rendering. Final root top ~104 px, matching the 104 px header; heading top ~212 px.
+- P2: the first service comparison had an underweighted heading and too much vertical displacement. Updated service heading size/weight and overview spacing, then recaptured and compared the same state.
+- P2: at 320 px the footer grid's intrinsic width created 1 px document overflow. Set the phone footer track to `minmax(0,1fr)`. Final client width and scroll width both 305 px (15 px browser scrollbar); the screenshot has no horizontal page scrollbar.
+- Fixed missing manufacturing photograph path `.png` → `.webp`; visually and through DOM confirmed loaded dimensions.
+
+Fidelity surfaces: local Inter and the approved geometric logo are retained; whitespace and font hierarchy follow the revised target. Pure-white header and principal reading surfaces, quiet grey dividers and lime action accents replace the heavy dark content sections. Desktop services are two columns with generous gaps and real expandable descriptions; phone layout uses one column. All imagery is reused source material; no new equipment illustration was invented. RU/EN service titles, scopes and enquiry context are complete. P3 optical differences from the generated target and slightly different navigation spacing are acceptable; its lettering is not used as an uneditable screenshot.
+
+Verified flows: ten service links in the top dropdown; jump opens the correct description; overview link; collapse; request retains selected service and shows serial-number field for lifecycle enquiries; mobile navigation scroll; fresh EN direct URL opens and positions the requested service; Escape closes the menu; switching language and original catalogue search/dialog continue to work. Header remains visible when scrolling. Browser logs returned no warning/error entries. No enquiry was sent.
+
+No unresolved P0/P1/P2 findings remain in checked desktop/390 px/320 px states. Existing backend/CRM and full-device/accessibility coverage limits still apply.
 
 final result: passed
