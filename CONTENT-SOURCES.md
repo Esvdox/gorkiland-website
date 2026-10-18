@@ -33,3 +33,5 @@
 ## Site №2 logo — 18.10.2026
 
 The user supplied a new trajectory-symbol / minimal wordmark direction. `brand-motion-black.svg` and `brand-motion-white.svg` are automatic vector traces of the third supplied monochrome artwork (reference crop codex-clipboard-7cf1ce30-cc67-4cfc-8338-7149320b388b.png), with a transparent background and solid fills. No red or metallic effects. The restored «ПРОЕКТИРУЕМ ЭМОЦИИ» tagline is set in Onest500 and converted to outlines. Used only in Site №2 header and footer. Previous logo files are retained for Site №1. The vector contains outlined lettering and does not rely on a visitor having a particular font installed.
+
+18.10.2026: Company introduction on Site №2 replaced with user-approved copy beginning «За каждым аттракционом ГоркиLand — более 30 лет опыта нашей команды…». The experience claim refers to the team, not the age of the legal entity; supplied and approved by the executive director in this conversation. English equivalent follows the same scope.
