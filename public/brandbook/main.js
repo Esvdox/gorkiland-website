@@ -1,0 +1,1 @@
+const menu=document.querySelector('.contents');document.querySelectorAll('.contents-panel a').forEach(a=>a.addEventListener('click',()=>menu.open=false));document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.open=false;menu.querySelector('summary').focus()}});document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.open=false});
