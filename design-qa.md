@@ -145,3 +145,17 @@ Browser390×844 capture implemented-option-2-mobile.png (native375px excluding s
 
 Geometry390px: logo225px, center44px; languages center44px; menu center44px. At320px all centers44px, logo flexes165px; scrollWidth305 versus viewport320 including scrollbar, no overflow. Mobile header88px; menu offset88px. Desktop original large identity preserved. Tested menu open/Escape and RU/EN switching at320px. Source one-row and actual compared without P0/P1/P2 mismatches. No logo geometry, hero caption or Site№1 changes. Vite build passed.
 final result: passed
+
+## 18.10.2026 — unified Onest typography and three sizes
+
+Source: existing Site№2 appearance at76f32d7, plus explicit user instruction to use one distinctive family outside the logo and no more than three sizes per page. Adopted self-hosted Onest (Latin/Cyrillic, OFL). Original wordmark outline remains unchanged; its supporting tagline converted from Arial text to Onest500 glyph outlines using the same source font. No claim of an exclusive custom typeface.
+
+Implementation: src/typography.css imported only by main-bm.jsx. Three tokens:14/18/adaptive32–64px on desktop;12/16/28px on phones. All text inherits the family and token values, including menu, buttons, labels, placeholders, specifications, service scopes, dialogs and footer. Mobile hero uses16px to retain two unbroken phrases. Menu label is explicitly hidden on phones with aria-label retained, avoiding font-size0 workarounds.
+
+Evidence: parent outputs/gorkiland-typography-2026-10-18/audit.json, before-viewport.png, after-viewport.png, typography-comparison-final.png, services-mobile.png, enquiry-mobile.png, product-mobile.png. The combined before/after viewport image was opened and reviewed. Viewport1280×720, native capture1265×712 excludes scrollbar/browser edge, same route/state and density1. Full-page images were NOT used as final comparison because that screenshot mode temporarily changes dynamic viewport units; the fixed viewport recapture is authoritative.
+
+29 browser measurements:6 routes×2 languages×2 viewport classes, desktop menu, expanded service, service request form, product detail, narrow320px EN home. Every state: family Onest/sans-serif, exactly three rendered CSS text sizes, no horizontal overflow. At1280px the three sizes are14/18/53.76; at390/320px12/16/28. Prior home had14 computed sizes. Inspecting direct text nodes includes off-screen laid-out page content and fields; hidden nodes and vector-logo geometry are excluded. Source SVG supporting caption is independently verified as Onest outlined glyphs.
+
+Fidelity surfaces: single family and controlled hierarchy; headings may differ in weight but not introduce sizes; established spacing/colors/photos retained; Cyrillic and English inspected; open form and product specification images opened and reviewed with no clipping or overlap. All heading-size changes are intentional explicit typography cleanup, rather than drift from the old mock. Site№1 does not import typography.css and retains its old typography. Font asset84.21KB WOFF2 served locally; license bundled. Browser audit files saved; content/assets verify passed, Vite multi-entry build passed, packaging tests4/4.
+
+final result: passed

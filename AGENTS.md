@@ -1,5 +1,7 @@
 # Prototype Instructions
 
+18.10.2026 typography decision: Site №2 uses self-hosted Onest everywhere outside the preserved wordmark outline, including the logo tagline (Onest 500 outlined). Enforce only three rendered CSS size tokens per viewport: desktop 14px / 18px / one responsive display size32–64px; mobile12px /16px /28px. Mobile hero uses16px to preserve its two unbroken phrases. All pages, menu, forms, input placeholders and product dialogs follow src/typography.css and TYPOGRAPHY.md. Do not add per-component text sizes or another family. Site №1 remains unchanged.
+
 18.10.2026: Site №1 is the INTAMIN-inspired home at `/`, fixed at tag `site-1-intamin` (fc8c599). Preserve it. Site №2 lives at `/site-2/` and uses the second displayed B&M-inspired concept (`outputs/gorkiland-site-2-bm-2026-10-18/concept-2.png`, ImageGen exec-7976e2c2-66cb-4a14-abca-8a77b1b6531c). Its design: approved white logo, discreet menu, left-aligned two-line white headline on Orion imagery, generous white company section. Reuse original product data, specifications, and service scopes, with isolated `bm.css`; do not replace Site №1. Both entry points must build and work on GitHub Pages.
 
 ## Approved project decisions
