@@ -21,3 +21,7 @@
 @media(prefers-reduced-motion:reduce){.bm-header{transition:none}}
 
 @media(max-height:600px) and (min-width:651px){.bm-hero-copy{top:36%}.bm-hero-copy h1{font-size:min(7.25vw,13vh);font-size:min(7.25vw,13dvh)}.bm-hero-copy p{font-size:17px;margin-top:16px}.bm-scroll{bottom:20px}}
+
+.bm-hero-copy .bm-statement{font-size:clamp(28px,4.2vw,80px);line-height:1.12;letter-spacing:-.035em;max-width:none}.bm-statement>span{display:block}
+@media(max-width:650px){.bm-hero-copy .bm-statement{font-size:clamp(24px,7.5vw,42px);line-height:1.15;letter-spacing:-.035em}.bm-hero-copy{top:38%}}
+@media(max-height:600px) and (min-width:651px){.bm-hero-copy .bm-statement{font-size:min(4.2vw,10dvh)}}

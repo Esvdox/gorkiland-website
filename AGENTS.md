@@ -19,3 +19,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 17.10.2026: User asked to unload the homepage. Keep a brief introduction and four photographic navigation tiles; put catalogue, parks, projects, company and services on separate query-addressed screens. Preserve RU/EN and direct service links.
 
 18.10.2026: Explicit feedback for Site №2: the hero is the first screen and must fill the entire browser viewport, with company content only after scrolling. Use dynamic viewport height on desktop and mobile; no fixed minimum/maximum height that clips or reveals the next section.
+
+18.10.2026: Site №2 hero headline approved verbatim: «ИНЖЕНЕРИЯ ДВИЖЕНИЯ. АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ». Preserve fullscreen hero; adapt line breaks to viewport. English equivalent: ENGINEERING MOTION. ARCHITECTURE OF EXPERIENCES.

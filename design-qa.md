@@ -102,3 +102,7 @@ Evidence: outputs/gorkiland-site-2-bm-2026-10-18/fullscreen-wide.png, fullscreen
 Browser geometry:2118×907→hero907/next section top907;390×844→hero844/next section top844;844×390→hero390, copy bottom282px and arrow top326px. No overlap or following section visible in the initial window. Fonts, logo, colors, hero imagery and text remain the approved design. A minor source white screenshot border is omitted intentionally. Site№1 untouched.
 Build passed; Sites packaging tests4/4. No new tests for the reversible CSS adjustment.
 final result: passed
+
+## 18.10.2026 — approved hero statement
+
+User replaced headline verbatim with «ИНЖЕНЕРИЯ ДВИЖЕНИЯ. АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ». This explicit text correction supersedes prior mock copy. Implemented uppercase as supplied, two phrase lines on desktop and natural four word lines on390px mobile. English equivalent updated. Desktop and mobile screenshots inspected: no overflow, full-height hero preserved; source photo, colors and logo unchanged. Vite build passed. final result: passed
