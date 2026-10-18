@@ -10,4 +10,5 @@
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*{transition:none!important}}
 .cover h1 br{display:initial}
 .approved-crop{display:block;position:relative;width:100%;aspect-ratio:1.81;overflow:hidden;margin-top:32px;background:#f4f5f5}.approved-crop .approved-source{position:absolute;width:200%;max-width:none;height:200%;object-fit:fill}.approved-crop.notebook .approved-source{left:-100%;top:0}.approved-crop.stand .approved-source{left:0;top:-100%}.approved-crop.stationery .approved-source{left:0;top:0}#environment .board-photo{margin-top:40px}
+#gifts .gift-board-title{margin-top:48px}
 @media print{.web-header,.web-footer,.downloads,.skip{display:none}.slide{break-inside:avoid;min-height:0;padding:30px;background:white;color:#0b1014}.cover{background:#0b1014;color:white}.image-link{margin:0}.board-photo{max-height:75vh;object-fit:contain}}
