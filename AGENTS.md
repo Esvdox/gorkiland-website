@@ -23,3 +23,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 18.10.2026: Site №2 hero headline approved verbatim: «ИНЖЕНЕРИЯ ДВИЖЕНИЯ. АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ». Preserve fullscreen hero; adapt line breaks to viewport. English equivalent: ENGINEERING MOTION. ARCHITECTURE OF EXPERIENCES.
 
 18.10.2026: User updated the logo direction for Site №2 with six supplied crops. Implement the compact monochrome trajectory symbol and minimal wordmark from the third crop (codex-clipboard-7cf1ce30-cc67-4cfc-8338-7149320b388b.png), no red, gradients or microtagline. Automatic vector trace saved as brand-motion-black/white.svg. Use in Site №2 header and footer only. Original logo assets and Site №1 remain intact.
+
+18.10.2026 correction: Site №2 logo MUST include «ПРОЕКТИРУЕМ ЭМОЦИИ» under the wordmark in both colors; this supersedes the earlier omission. Each hero phrase must occupy exactly one unbroken line on every viewport, for a total of two lines. Preserve the final period on each phrase and reduce the mobile type size as necessary.

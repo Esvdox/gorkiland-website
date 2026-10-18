@@ -122,3 +122,12 @@ Required surfaces: outlined source lettering retained; no external font required
 Local Site №1 reopened and retains its original header, hero and four entrances. Original logo asset files unchanged. Browser error log empty. Content/asset verification passed; both entries build; packaging tests4/4 passed. New brand applied to Site №2 header and footer, no video replacement.
 
 final result: passed
+
+## 18.10.2026 — no-wrap phrases and restored logo tagline
+
+User corrections supersede prior microtagline omission and mobile four-line wrap. Each hero phrase has white-space:nowrap. On phones the font is5vw so the complete phrases remain within the viewport. Final periods retained. Restored «ПРОЕКТИРУЕМ ЭМОЦИИ» under the original supplied vector wordmark in both SVG versions, using editable vector text and expanded viewBox380 high. Existing outlined symbol and name are unchanged; font family for the subtitle is Arial/sans-serif.
+
+Visual evidence: parent outputs/gorkiland-brand-motion-2026-10-18/two-lines-mobile.png and two-lines-desktop.png opened in browser. At390×844, each phrase has one25.35px line box. At320×760, each has one20.8px line box and scrollWidth equals available263px. Page scrollWidth305px versus window320px including native scrollbar. EN also has no page overflow. Fullscreen hero retained. Logo subtitle visible on desktop and mobile. Native SVG text uses the requested actual phrase, not a raster approximation. Source user corrections are textual; no new visual concept requested.
+
+Vite build passed. Both logo output files refreshed. No changes to Site№1 branding.
+final result: passed
