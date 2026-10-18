@@ -178,3 +178,13 @@ Five fidelity surfaces:
 Interactions verified: menu open, RU/EN switch inside menu, Escape closes and returns focus, direct Engineering service opens expanded, company arrow scrolls. All six mobile routes, open menu, RU/EN home and desktop have one font, three sizes and no horizontal overflow.320/390/430 widths checked. Source1 asset and entrypoint unchanged. No outstanding P0/P1/P2 layout findings. Video remains separately unimplemented pending suitable approved footage.
 
 final result: passed (mobile layout scope; video not delivered)
+
+## Navigation and motion revision — 18.10.2026
+
+Source: user screenshot CA61B5DD-0ADF-413B-A417-8555C1047C29/1-Фото-1.jpg (589×1280), website crop0,83,589×1065. Implementation: outputs/gorkiland-menu-motion-2026-10-18 in parent workspace; before-mobile.jpg/before-desktop.jpg and after-mobile.jpg/after-desktop.jpg. Combined reference-result.png compared at normalized390×705, implementation capture375×678 proportionally scaled. Exact source content differs intentionally: our four primary links, legal brand and language controls remain.
+
+Initial comparison identified [P2] excess mobile panel height; reduced mobile row/panel spacing, kept44px secondary and language controls. Revised panel371px at390px CSS width, leaving hero visible. Final mobile capture reopened and compared with source after adjustment. Right-aligned bold primary links, calmer second level and white panel preserve source hierarchy. Own brand remains visible; menu trigger intentionally stays at fixed header position rather than moving down with the panel, for predictable access.
+
+Required surfaces: Onest and three sizes retained; desktop two columns collapse to right-aligned mobile stack; white/black and own lime palette; original logo and own equipment imagery retained with no competitor assets; native copy/navigation real and bilingual. Trigger uses functional geometric icon, not replacement brand artwork. Entry/exit transitions, plus morph, restrained headline/scroll reveals and hover feedback implemented. Closed nav inert/aria-hidden; Escape restores focus, language and service navigation tested, repeat toggle reversible.320/390 mobile and1280 desktop inspected with no overflow. Reduced-motion CSS disables all site-two motion and reveals content; OS preference toggle itself not exercised.
+
+final result: passed (navigation and motion implementation; system preference toggle test remains unverified)

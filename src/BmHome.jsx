@@ -1,7 +1,15 @@
 import {ArrowDown,ArrowUpRight} from '@phosphor-icons/react';
+import {useEffect} from 'react';
 const asset=name=>`${import.meta.env.BASE_URL}assets/${name}`;
 export function BmHome({lang,link}){
  const ru=lang==='ru';
+ useEffect(()=>{
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const nodes=[...document.querySelectorAll('.bm-company-copy,.bm-preview-heading,.bm-preview-grid>a,.bm-parks')];
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.12});
+  nodes.forEach(node=>{if(node.getBoundingClientRect().top>=window.innerHeight){node.classList.add('bm-reveal');observer.observe(node);}});
+  return()=>{observer.disconnect();nodes.forEach(node=>node.classList.remove('bm-reveal','is-visible'));};
+ },[]);
  return <>
   <section className="bm-hero" aria-labelledby="bm-title">
    <img className="bm-hero-photo" src={asset('hero.webp')} alt={ru?'Цепочная карусель ГоркиLand в парке «Орион»':'ГоркиLand elevating swing ride in Orion Park'} width="1605" height="980" fetchPriority="high"/>

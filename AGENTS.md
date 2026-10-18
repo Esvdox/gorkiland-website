@@ -34,3 +34,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 18.10.2026 latest mobile revision: supplied B&M phone screenshots supersede the unbroken mobile headline requirement. Mobile hero is a centered, bold four-line statement, with original words and final periods. Use the display token clamp(28px,10.5vw,54px), still only three text sizes. Compact logo with full tagline and menu share one row; mobile languages move into the expanded menu. Full dynamic viewport and own Orion imagery remain. Desktop and Site №1 stay intact.
 
+
+18.10.2026 menu/motion: latest B&M mobile menu screenshot approved as direction. Primary navigation is short and right-aligned, with Services and project enquiry as secondary items; full service directory remains on its own page. Desktop and phone share the white angled menu tab and plus-to-minus transition; mobile drops the text label and moves language controls into the menu. Persistent inert closed navigation supports reversible entrance/exit transitions. Respect reduced-motion; no infinite decorative movement or fake ride rotation.
