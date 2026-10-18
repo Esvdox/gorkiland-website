@@ -27,3 +27,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 18.10.2026 correction: Site №2 logo MUST include «ПРОЕКТИРУЕМ ЭМОЦИИ» under the wordmark in both colors; this supersedes the earlier omission. Each hero phrase must occupy exactly one unbroken line on every viewport, for a total of two lines. Preserve the final period on each phrase and reduce the mobile type size as necessary.
 
 18.10.2026: Increase Site №2 header logo and its tagline by1.5 at each breakpoint (525px desktop,420px tablet,258px mobile,232.5px narrow mobile). On phones controls occupy a second header row to prevent overlap. Site№1 remains unchanged.
+
+18.10.2026: User chose displayed header option2 (exec-e68c9155-7cf9-4c96-a4f3-aaed652195bd). Logo, RU/EN, menu+ stay on one row at all widths. Mobile logo225px at390 viewport, flexes down on320. Restore88px mobile header/menu offset. This supersedes the two-row mobile header and fixed1.5 mobile scaling. Preserve full tagline and source vector logo.

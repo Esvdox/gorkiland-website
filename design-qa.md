@@ -136,3 +136,12 @@ final result: passed
 ## 18.10.2026 — header logo scaled1.5
 
 Explicit user scale request applied to Site№2 header identity including its subtitle: base350→525px, tablet280→420px, mobile172→258px, narrow155→232.5px. Image container height also52→78px and44→66px. Header vertical padding adapted to preserve desktop/tablet navigation. On phones the controls occupy a second row and menu offsets follow the129px header. Browser desktop1265×712 and narrow320×760 opened and inspected; no overflow or overlap; narrow logo width232.5px verified. Evidence: outputs/gorkiland-brand-motion-2026-10-18/logo-150-desktop.png in parent workspace; mobile view inspected. No changes to logo geometry, color, subtitle wording or Site№1. Vite build passed; original source/logo-size difference is intentional explicit feedback. final result: passed
+
+## 18.10.2026 — selected one-row header option2
+
+Source: second displayed result exec-e68c9155-7cf9-4c96-a4f3-aaed652195bd, parent outputs/gorkiland-header-options-2026-10-18/option-2.png. User chose2. Implemented source layout: logo left, RU/EN then menu at far right, no menu underline; mandatory logo tagline retained. Original SVG used instead of generated lettering. Supersedes earlier two-row mobile rule.
+
+Browser390×844 capture implemented-option-2-mobile.png (native375px excluding scrollbar). Combined comparison selected-comparison.png: source1844×853 scaled proportionally to375px wide and padded7px below; actual cropped to375×180. Opened and compared. Intentional difference: real existing hero image crop retained instead of generated sky. Header alignment, white logo, lime active-language underline, control order and tagline match target. Existing Inter controls and source SVG wordmark retained.
+
+Geometry390px: logo225px, center44px; languages center44px; menu center44px. At320px all centers44px, logo flexes165px; scrollWidth305 versus viewport320 including scrollbar, no overflow. Mobile header88px; menu offset88px. Desktop original large identity preserved. Tested menu open/Escape and RU/EN switching at320px. Source one-row and actual compared without P0/P1/P2 mismatches. No logo geometry, hero caption or Site№1 changes. Vite build passed.
+final result: passed
