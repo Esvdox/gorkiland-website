@@ -21,7 +21,7 @@ for(const service of services){
  assert.ok(service.ru&&service.en&&service.descriptionRu&&service.descriptionEn,'Missing service translation');
  assert.ok(service.itemsRu.length&&service.itemsRu.length===service.itemsEn.length,'Incomplete service scope');
 }
-for(const file of ['App.jsx','Header.jsx']){
+for(const file of ['App.jsx','Header.jsx','BmHeader.jsx','BmHome.jsx']){
  const source=await readFile(new URL(`../src/${file}`,import.meta.url),'utf8');
  for(const match of source.matchAll(/asset\('([^']+)'\)/g))await access(new URL(`../public/assets/${match[1]}`,import.meta.url));
 }

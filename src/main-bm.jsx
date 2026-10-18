@@ -1,0 +1,9 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {App} from './App';
+import {BmHeader} from './BmHeader';
+import {BmHome} from './BmHome';
+import './styles.css';
+import './refinements.css';
+import './bm.css';
+createRoot(document.getElementById('root')).render(<React.StrictMode><div className="bm-site"><App HeaderComponent={BmHeader} HomeComponent={BmHome}/></div></React.StrictMode>);

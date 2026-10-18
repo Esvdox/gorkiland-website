@@ -28,3 +28,10 @@ GitHub Actions проверяет сборку и публикует `dist/clien
 Фотографии и бренд принадлежат их правообладателям; не предназначены для свободного повторного использования сторонними проектами. Inter распространяется по SIL OFL: `src/assets-font/OFL.txt`. Зависимости сохраняют собственные лицензии.
 
 Homepage revision: four photographic entry points. Dedicated screens use ?page=catalog|solutions|projects|manufacturing|service with RU/EN and direct service anchors, supported on GitHub Pages refresh.
+
+## Two independently accessible designs
+
+- Site №1: https://esvdox.github.io/gorkiland-website/ — the retained INTAMIN-inspired version; original snapshot tagged `site-1-intamin`.
+- Site №2: https://esvdox.github.io/gorkiland-website/site-2/ — selected second B&M-inspired concept. White approved logo, full-width Orion image, left headline, company section, expandable menu with all ten services.
+
+Both designs share canonical product data and enquiry dialogs. The new design has its own HTML entry, main-bm.jsx, BmHeader/BmHome and scoped bm.css. Query-addressed sections and language state remain within their respective entry paths; refreshing a nested service link is supported by the static HTML entry. Vite builds both index.html and site-2/index.html in one Pages artifact. No third-party ride images or video are used. The hero retains the existing artistic adaptation of the original Orion photograph, as documented in CONTENT-SOURCES.md. No new backend or CRM integration; the request form prepares an email in the visitor's mail application.

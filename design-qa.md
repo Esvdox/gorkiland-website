@@ -62,3 +62,33 @@ No unresolved P0/P1/P2 findings remain in checked desktop/390 px/320 px states. 
 final result: passed
 
 Homepage density revision 17.10.2026: removed detailed catalogue, solutions, cases, manufacturing and services from home; dedicated query-addressed screens retain all content. Browser verified 12 catalogue cards and 5 cases after navigation; four image tiles inspected on desktop. Logo and original portfolio retained.
+
+## 18.10.2026 — Site №2, selected B&M concept
+
+Source visual truth: `outputs/gorkiland-site-2-bm-2026-10-18/concept-2.png` in parent workspace (ImageGen exec-7976e2c2-66cb-4a14-abca-8a77b1b6531c, second image displayed and selected by user).
+Implementation: local `/site-2/?lang=ru`; evidence in the same output directory: implemented-desktop-final.png, comparison-final.png, approved-logo-detail.png, mobile-home.png, mobile-menu.png and mobile-en-320.png.
+
+Viewport: 1374×1145 CSS px, density 1. Source 1374×1145. Full-page browser capture is 1359px wide (15px native scrollbar), cropped to first 1145px and padded with 15px white on right for the combined 2748×1145 comparison. No stretching. The native quick screenshot was clipped at 1071px and was not used as final comparison evidence.
+State: home, RU, closed menu, top of page. Mobile checked at 390×844 RU and 320×760 EN. No overflow at 320 (content width305, viewport320 including native scrollbar).
+
+Findings and iterations:
+- [P2, fixed] Initial hero crop placed ride top too close to masthead. Object position adjusted to 25% vertical; original hero asset retained instead of generated product geometry. Evidence: comparison-initial.png → comparison-final.png.
+- [P2, fixed] Initial headline weight and size were too light/small. Set 700 weight and 7.25vw desktop, retained exact two-line copy; recaptured final comparison.
+- [P2, fixed] Compact mobile menu button initially had only 24px width. Its interactive area is now at least44×44px.
+
+Required fidelity surfaces:
+- Typography: local Inter variable; bold hero versus light editorial company heading. Two-line hero and three-line company copy match selected layout. Exact original geometric wordmark preserved in the source SVG. Generated mock's tiny letterform variations are not copied into the brand asset.
+- Spacing: sparse masthead, 51vw hero, left text and right attraction, 28% side label/company grid, 64px company top padding. Full-view combined comparison reviewed.
+- Colors: white/black editorial surface and restrained lime details. Original photographic colors retained; no new product imagery created.
+- Imagery: supplied approved logo and existing hero.webp, orion.webp, photo-8.webp. Hero original crop differs slightly from generated mock as intentional source fidelity; no invented technical geometry accepted. Focused logo evidence inspected.
+- Copy: selected Russian headline and company text retained; English equivalent implemented. Manufacturer configurations, readiness disclosures, 12 product families, 5 cases and ten services preserved.
+
+Browser checks: desktop menu, direct modernization link and reload with expanded state, 12 catalogue families, search Top Spin→one result, specifications, request dialog and Escape; mobile service navigation, RU/EN switch and English Maintenance & repair; Escape closes menu. No actual email sent. Browser errors: none observed. Original Site №1 reopened: original header, hero, four home tiles and links retained.
+
+Beyond the supplied viewport: below-fold portfolio preview, park link and contact reused from established project content. No mock or asset exists for a ride video, so the photograph is intentionally static. Public enquiry delivery still uses mailto, not a backend.
+
+Follow-up polish: [P3] slight letterform/crop differences from the generated image remain; original vector brand and source photography take precedence.
+
+Implementation checklist: selected source resolved; both entry points built; comparison and mobile evidence inspected; services/catalogue/request flow checked; root Site №1 preserved.
+
+final result: passed
