@@ -5,7 +5,7 @@ export function BmHome({lang,link}){
  return <>
   <section className="bm-hero" aria-labelledby="bm-title">
    <img className="bm-hero-photo" src={asset('hero.webp')} alt={ru?'Цепочная карусель ГоркиLand в парке «Орион»':'ГоркиLand elevating swing ride in Orion Park'} width="1605" height="980" fetchPriority="high"/>
-   <div className="bm-hero-copy"><h1 id="bm-title" className="bm-statement"><span>{ru?'ИНЖЕНЕРИЯ ДВИЖЕНИЯ.':'ENGINEERING MOTION.'}</span><span>{ru?'АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ':'ARCHITECTURE OF EXPERIENCES'}</span></h1><p>{ru?'Аттракционы и парки / ГоркиLand':'Rides and parks / ГоркиLand'}</p></div>
+   <div className="bm-hero-copy"><h1 id="bm-title" className="bm-statement"><span>{ru?'ИНЖЕНЕРИЯ ДВИЖЕНИЯ.':'ENGINEERING MOTION.'}</span><span>{ru?'АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ':'ARCHITECTURE OF EXPERIENCES'}</span></h1></div>
    <a href="#bm-company" className="bm-scroll" aria-label={ru?'О компании':'About the company'}><ArrowDown size={38} weight="light"/></a>
   </section>
   <section id="bm-company" className="bm-company">
