@@ -5,7 +5,7 @@ import {specs} from './specifications';
 import {Header} from './Header';
 import {ServicesDirectory} from './ServicesDirectory';
 const asset = name => `${import.meta.env.BASE_URL}assets/${name}`;
-const pageFor=id=>['catalog','solutions','projects','manufacturing','service'].find(p=>id===p||id.startsWith(p+'-'))||'home';
+const pageFor=id=>['catalog','solutions','projects','manufacturing','service','news'].find(p=>id===p||id.startsWith(p+'-'))||'home';
 const categories=['all','family','thrill','observation'];
 function Brand({image='logo-black.svg'}){return <a className="brand" href={`?lang=${new URLSearchParams(window.location.search).get('lang')||'ru'}`} aria-label="ГоркиLand"><img src={asset(image)} alt="ГоркиLand — инжиниринг и аттракционы" width="434" height="145"/></a>;}
 function Modal({children,onClose,label,title}){
@@ -13,13 +13,13 @@ function Modal({children,onClose,label,title}){
  useEffect(()=>{const previous=document.activeElement;ref.current.showModal();document.body.style.overflow='hidden';return()=>{document.body.style.overflow='';previous?.focus();};},[]);
  return <dialog ref={ref} className="dialog" onCancel={onClose} onClick={e=>{if(e.target===e.currentTarget)onClose();}} aria-label={title||label}><button className="close icon-button" onClick={onClose} aria-label={label}><X size={24}/></button>{children}</dialog>;
 }
-export function App({HeaderComponent=Header,HomeComponent=null,brandImage='logo-black.svg'}){
+export function App({HeaderComponent=Header,HomeComponent=null,NewsComponent=null,brandImage='logo-black.svg'}){
  const [lang,setLang]=useState(()=>new URLSearchParams(window.location.search).get('lang')==='en'?'en':'ru');
  const [activeService,setActiveService]=useState(()=>window.location.hash.startsWith('#service-')?window.location.hash.slice(9):null);
  const [filter,setFilter]=useState('all'),[query,setQuery]=useState(''),[product,setProduct]=useState(null),[enquiry,setEnquiry]=useState(null),[prepared,setPrepared]=useState(false);
  const t=copy[lang],ru=lang==='ru';
  const requested=new URLSearchParams(window.location.search).get('page')||pageFor(window.location.hash.slice(1));
- const page=['catalog','solutions','projects','manufacturing','service'].includes(requested)?requested:'home';
+ const page=['catalog','solutions','projects','manufacturing','service','news'].includes(requested)&&!(requested==='news'&&!NewsComponent)?requested:'home';
  const link=id=>`?page=${pageFor(id)}&lang=${lang}#${id}`;
  useEffect(()=>{document.documentElement.lang=lang;document.title=ru?'ГоркиLand — аттракционы и инжиниринг парков':'ГоркиLand — rides & park engineering';const url=new URL(window.location);url.searchParams.set('lang',lang);history.replaceState(null,'',url);},[lang,ru]);
  useEffect(()=>{const sync=()=>{const hash=window.location.hash;if(hash.startsWith('#service-'))setActiveService(hash.slice(9));if(hash==='#service'||hash.startsWith('#service-'))requestAnimationFrame(()=>document.getElementById(hash.slice(1))?.scrollIntoView({behavior:'instant',block:'start'}));};sync();window.addEventListener('hashchange',sync);return()=>window.removeEventListener('hashchange',sync);},[]);
@@ -45,6 +45,7 @@ export function App({HeaderComponent=Header,HomeComponent=null,brandImage='logo-
  {page==='solutions'&&<section id="solutions" className="section solutions"><div className="section-heading"><p className="eyebrow">{t.solutionsTag}</p><h2>{t.solutionsTitle}</h2><p className="section-intro">{t.solutionsIntro}</p></div><div className="solution-list">{t.solutionNames.map((name,i)=><button key={name} className="solution-row" onClick={()=>ask(name)}><span className="row-number">0{i+1}</span><div><h3>{name}</h3><p>{t.solutionTexts[i]}</p></div><span className="solution-status">{t.custom}</span><ArrowUpRight size={30}/></button>)}</div><p className="disclosure">{t.solutionNote}</p></section>}
  {page==='projects'&&<section id="projects" className="section projects"><div className="section-heading"><p className="eyebrow">{t.projectsTag}</p><h2>{t.projectsTitle}</h2></div><div className="case-grid">{cases.map((c,i)=><article className={`case ${i===0?'featured':''}`} key={c.ru}><div className="case-image"><img src={asset(c.image)} alt={ru?c.ru:c.en} loading="lazy" width="900" height="650"/><span className="case-status">{c.status==='open'?t.open:t.production} / {c.year}</span></div><p className="case-place">{ru?c.placeRu:c.placeEn}</p><h3>{ru?c.ru:c.en}</h3><p>{ru?c.ruText:c.enText}</p><a className="text-link small" href="https://gorkiland.ru/" target="_blank" rel="noreferrer">{t.source}<ArrowUpRight size={16}/></a></article>)}</div></section>}
  {page==='manufacturing'&&<section id="manufacturing" className="factory"><div className="factory-photo"><img src={asset('photo-8.webp')} alt={ru?'Разработка пассажирских модулей ГоркиLand':'Passenger module development at ГоркиLand'} loading="lazy" width="1000" height="900"/></div><div className="factory-copy"><p className="eyebrow">{t.factoryTag}</p><h2>{t.factoryTitle}</h2><p>{t.factoryText}</p><ol>{t.steps.map((step,i)=><li key={step}><span>0{i+1}</span>{step}</li>)}</ol><a className="text-link" href="https://gorkiland.ru/okompanii" target="_blank" rel="noreferrer">{t.factoryLink}<ArrowUpRight size={19}/></a></div></section>}
+ {page==='news'&&NewsComponent&&<NewsComponent lang={lang}/>}
  {page==='service'&&<ServicesDirectory lang={lang} active={activeService} setActive={setActiveService} onRequest={ask}/>}
  {page==='home'&&<section id="contact" className="section contact"><p className="eyebrow">{t.contactTag}</p><h2>{t.contactTitle}</h2><div className="contact-bottom"><p>{t.contactText}</p><button className="button dark-button" onClick={()=>ask()}>{t.discuss}<ArrowUpRight size={23}/></button></div></section>}
  </main><footer className="footer"><div><Brand image={brandImage}/><p>{t.footer}</p></div><div className="footer-contact"><a href="mailto:sales@gorkiland.ru"><Envelope size={20}/>sales@gorkiland.ru</a><a href="tel:+78005059980"><Phone size={20}/>+7 (800) 505-99-80</a><p>{t.address}</p></div><div className="footer-legal"><p>© 2026 ГоркиLand</p><p>{t.company}</p><a href={link('manufacturing')}>{ru?'Производство':'Manufacturing'}</a></div></footer>
@@ -52,3 +53,4 @@ export function App({HeaderComponent=Header,HomeComponent=null,brandImage='logo-
  {enquiry&&<Modal onClose={()=>setEnquiry(null)} label={t.close} title={enquiry.service?t.formService:t.formTitle}><form className="enquiry" onSubmit={prepare}><p className="eyebrow">ГоркиLand / {enquiry.service?'SERVICE':'PROJECT'}</p><h2>{enquiry.service?t.formService:t.formTitle}</h2>{enquiry.subject&&<p className="enquiry-subject">{enquiry.subject}</p>}<p className="muted">{t.formHelp}</p><label>{t.name}<input name="name" autoComplete="name" required maxLength={120}/></label><label>{t.contact}<input name="contact" autoComplete="email" required maxLength={160}/></label>{enquiry.service&&<label>{t.serial}<input name="serial" maxLength={160}/></label>}<label>{t.task}<textarea name="task" rows={3} required maxLength={2500}/></label><button className="button primary" type="submit">{t.send}<ArrowUpRight size={20}/></button>{prepared&&<p className="prepared" role="status">{t.mailReady}</p>}<p className="form-note">{t.mailNote} <a href="mailto:sales@gorkiland.ru">sales@gorkiland.ru</a></p></form></Modal>}
  </>;
 }
+

@@ -30,7 +30,8 @@ export function BmHeader({lang,setLang,onRequest,home}){
   </header>
   <div className={`bm-menu-layer ${open?'is-open':''}`} inert={!open} aria-hidden={!open}><button className="bm-menu-backdrop" aria-label={ru?'Закрыть меню':'Close menu'} onClick={close} tabIndex={-1}/><nav ref={panel} className="bm-menu-panel" id="bm-navigation" aria-label={ru?'Основная навигация':'Main navigation'}>
    <div className="bm-menu-main">{[['catalog',ru?'Аттракционы':'Rides'],['solutions',ru?'Парки':'Parks'],['projects',ru?'Проекты':'Projects'],['manufacturing',ru?'Компания':'Company']].map(([id,title],i)=><a key={id} style={{'--item':i}} href={link(id)} onClick={close}>{title}</a>)}</div>
-   <div className="bm-menu-secondary"><a href={link('service')} onClick={close}>{ru?'Услуги':'Services'}</a><button onClick={()=>{close();onRequest();}}>{ru?'Обсудить проект':'Discuss a project'}</button><div className="bm-menu-mobile-languages bm-languages" aria-label={ru?'Язык сайта':'Site language'}>{['ru','en'].map(l=><button key={l} lang={l} aria-pressed={lang===l} onClick={()=>setLang(l)}>{l.toUpperCase()}</button>)}</div></div>
+   <div className="bm-menu-secondary"><a href={link('news')} onClick={close}>{ru?'Новости':'News'}</a><a href={link('service')} onClick={close}>{ru?'Услуги':'Services'}</a><button onClick={()=>{close();onRequest();}}>{ru?'Обсудить проект':'Discuss a project'}</button><div className="bm-menu-mobile-languages bm-languages" aria-label={ru?'Язык сайта':'Site language'}>{['ru','en'].map(l=><button key={l} lang={l} aria-pressed={lang===l} onClick={()=>setLang(l)}>{l.toUpperCase()}</button>)}</div></div>
   </nav></div>
  </>;
 }
+
