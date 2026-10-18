@@ -159,3 +159,22 @@ Evidence: parent outputs/gorkiland-typography-2026-10-18/audit.json, before-view
 Fidelity surfaces: single family and controlled hierarchy; headings may differ in weight but not introduce sizes; established spacing/colors/photos retained; Cyrillic and English inspected; open form and product specification images opened and reviewed with no clipping or overlap. All heading-size changes are intentional explicit typography cleanup, rather than drift from the old mock. Site№1 does not import typography.css and retains its old typography. Font asset84.21KB WOFF2 served locally; license bundled. Browser audit files saved; content/assets verify passed, Vite multi-entry build passed, packaging tests4/4.
 
 final result: passed
+
+## Mobile B&M reference revision — 18.10.2026
+
+Source visual truth: user attachments `3807787E-1545-4CCB-A9DB-2DD539C7E83A/1-Фото-1.jpg` and `3-Фото-3.jpg`; implementation: `outputs/gorkiland-mobile-bm-revision-2026-10-18/` in the parent workspace. The third reference was cropped to website content x0,y83,589×1065, excluding iOS/Safari chrome. Normalized to390×705. Browser CSS viewport390×705 produced375×678 capture pixels (browser capture scaling about0.962); normalized proportionally to390×705. Combined comparison: `reference-and-result.png`, opened and reviewed. Additional full-height390×844,320×700,430×932 and desktop1280×720 states inspected.
+
+Initial findings against fresh `before.png`: [P1]16px headline lost the reference's dominant hierarchy; [P1] left-aligned text and sky-heavy crop did not work as a mobile poster; [P2] header language controls competed with the brand; [P2] left arrow broke the central axis. Initial result: blocked.
+
+Fixes: four intentional lines using the shared display token; centered text with two final periods; focal crop72%; smaller one-row brand and white menu button; languages inside menu; centered48px scroll target. Mobile scroll-padding aligned to72px header. Later captures `after-390.png`, `after-320.png`, `english-390.png`, `menu-390.png`, `service-390.png`, `desktop.png` reviewed. Combined reference comparison confirms the intended central composition, generous image field and minimal header. Header/tagline and text wrapping are legible in the focused phone views.
+
+Five fidelity surfaces:
+- Typography: own Onest retained, uppercase Russian copy longer than reference English;40.95px at390,33.6px at320,45.15px at430;12/16 plus the single display size. No fourth size. English also fits. Internal pages audited after token change.
+- Spacing: full100dvh; header72; central message and bottom arrow. Four lines intentionally replace prior two-line mobile instruction. Desktop remains left-aligned/two-line.
+- Colors: own white/blue/lime retained. Reference red accent intentionally not copied. Text treatment includes a light darkening for contrast over equipment.
+- Images: original approved Orion-derived photo, no B&M image substituted. **Static image remains an explicit material limitation; video fidelity is not achieved or claimed.** Current scope passes layout QA, not video production.
+- Copy: exact Russian words and final periods; mandatory outlined logo tagline preserved. No browser chrome recreated.
+
+Interactions verified: menu open, RU/EN switch inside menu, Escape closes and returns focus, direct Engineering service opens expanded, company arrow scrolls. All six mobile routes, open menu, RU/EN home and desktop have one font, three sizes and no horizontal overflow.320/390/430 widths checked. Source1 asset and entrypoint unchanged. No outstanding P0/P1/P2 layout findings. Video remains separately unimplemented pending suitable approved footage.
+
+final result: passed (mobile layout scope; video not delivered)

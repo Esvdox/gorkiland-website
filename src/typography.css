@@ -14,8 +14,9 @@
 .bm-site .bm-menu-services a{line-height:1.5}
 .bm-site .bm-service-heading{font-weight:650}
 @media(max-width:650px){
- .bm-site{--type-small:12px;--type-body:16px;--type-display:28px}
+ .bm-site{--type-small:12px;--type-body:16px;--type-display:clamp(28px,10.5vw,54px)}
  .bm-site .bm-menu-label{display:none}
- .bm-site .bm-hero-copy .bm-statement{font-size:var(--type-body)!important;line-height:1.3}
+ .bm-site .bm-hero-copy .bm-statement{font-size:var(--type-display)!important;line-height:1.14;font-weight:750;letter-spacing:-.045em}
  .bm-site .bm-header-controls{gap:10px}
 }
+

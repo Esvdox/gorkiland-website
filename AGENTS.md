@@ -31,3 +31,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 18.10.2026: Increase Site №2 header logo and its tagline by1.5 at each breakpoint (525px desktop,420px tablet,258px mobile,232.5px narrow mobile). On phones controls occupy a second header row to prevent overlap. Site№1 remains unchanged.
 
 18.10.2026: User chose displayed header option2 (exec-e68c9155-7cf9-4c96-a4f3-aaed652195bd). Logo, RU/EN, menu+ stay on one row at all widths. Mobile logo225px at390 viewport, flexes down on320. Restore88px mobile header/menu offset. This supersedes the two-row mobile header and fixed1.5 mobile scaling. Preserve full tagline and source vector logo.
+
+18.10.2026 latest mobile revision: supplied B&M phone screenshots supersede the unbroken mobile headline requirement. Mobile hero is a centered, bold four-line statement, with original words and final periods. Use the display token clamp(28px,10.5vw,54px), still only three text sizes. Compact logo with full tagline and menu share one row; mobile languages move into the expanded menu. Full dynamic viewport and own Orion imagery remain. Desktop and Site №1 stay intact.
+
