@@ -92,3 +92,13 @@ Follow-up polish: [P3] slight letterform/crop differences from the generated ima
 Implementation checklist: selected source resolved; both entry points built; comparison and mobile evidence inspected; services/catalogue/request flow checked; root Site №1 preserved.
 
 final result: passed
+
+## 18.10.2026 — viewport-sized first screen
+
+User reference: C:/Users/sergey/AppData/Local/Temp/codex-clipboard-74621442-a1e3-422b-b52e-860a86b440c2.png (2118×907). Explicit requirement supersedes the previous selected mock's partial white section in the first viewport.
+
+Implementation: bm.css hero uses100vh fallback and100dvh, no old minimum/maximum caps. Removed mobile82svh and fixed height limits. Short landscape windows get a height-constrained headline to retain the arrow and caption.
+Evidence: outputs/gorkiland-site-2-bm-2026-10-18/fullscreen-wide.png, fullscreen-mobile.png and fullscreen-comparison.png in parent workspace. Source and screenshot normalized proportionally into equal1059×454 panes, no stretching; native screenshot2103×901 excludes browser edge/scrollbar. The combined comparison was opened and reviewed.
+Browser geometry:2118×907→hero907/next section top907;390×844→hero844/next section top844;844×390→hero390, copy bottom282px and arrow top326px. No overlap or following section visible in the initial window. Fonts, logo, colors, hero imagery and text remain the approved design. A minor source white screenshot border is omitted intentionally. Site№1 untouched.
+Build passed; Sites packaging tests4/4. No new tests for the reversible CSS adjustment.
+final result: passed
