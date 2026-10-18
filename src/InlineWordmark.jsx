@@ -6,6 +6,8 @@ export function brandify(node){
  if(typeof node==='string')return node.split(brandPattern).map((part,i)=>/^(ГоркиLand|GorkiLand)$/i.test(part)?<InlineWordmark key={`brand-${i}`}/>:part);
  if(Array.isArray(node))return Children.map(node,child=>brandify(child));
  if(!isValidElement(node)||node.type===InlineWordmark||['input','textarea','script','style','code','pre','svg'].includes(node.type))return node;
+ // Technical contact addresses must remain readable and copyable as plain text.
+ if(node.type==='a'&&/^(mailto:|tel:)/i.test(node.props.href||''))return node;
  if(node.props.children===undefined)return node;
  return cloneElement(node,undefined,brandify(node.props.children));
 }
