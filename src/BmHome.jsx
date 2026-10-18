@@ -1,3 +1,4 @@
+import {brandify} from './InlineWordmark';
 import {Partners} from './PartnerGrid';
 import {NewsSection} from './NewsSection';
 import {ArrowDown,ArrowUpRight} from '@phosphor-icons/react';
@@ -12,7 +13,7 @@ export function BmHome({lang,link}){
   nodes.forEach(node=>{if(node.getBoundingClientRect().top>=window.innerHeight){node.classList.add('bm-reveal');observer.observe(node);}});
   return()=>{observer.disconnect();nodes.forEach(node=>node.classList.remove('bm-reveal','is-visible'));};
  },[]);
- return <>
+ return brandify(<>
   <section className="bm-hero" aria-labelledby="bm-title">
    <img className="bm-hero-photo" src={asset('hero.webp')} alt={ru?'Цепочная карусель ГоркиLand в парке «Орион»':'ГоркиLand elevating swing ride in Orion Park'} width="1605" height="980" fetchPriority="high"/>
    <div className="bm-hero-copy"><h1 id="bm-title" className="bm-statement"><span>{ru?'ИНЖЕНЕРИЯ':'ENGINEERING'}<br className="bm-mobile-break"/>{' '}{ru?'ДВИЖЕНИЯ.':'MOTION.'}</span><span>{ru?'АРХИТЕКТУРА':'ARCHITECTURE'}<br className="bm-mobile-break"/>{' '}<span className="bm-final-word">{ru?'ВПЕЧАТЛЕНИЙ.':'OF EXPERIENCES.'}</span></span></h1></div>
@@ -26,7 +27,7 @@ export function BmHome({lang,link}){
     <NewsSection lang={lang} compact/>
     <Partners lang={lang}/>
   <div className="bm-parks"><p>{ru?'Больше, чем отдельный аттракцион.':'More than an individual ride.'}</p><a href={link('solutions')}>{ru?'Парки и тематические пространства':'Parks and themed spaces'}<ArrowUpRight size={28}/></a></div>
- </>;
+ </>);
 }
 
 

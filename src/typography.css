@@ -20,3 +20,6 @@
  .bm-site .bm-header-controls{gap:10px}
 }
 
+/* Wordmark in flowing copy: current text color, no emblem/tagline, proportional to its line. */
+.bm-site .inline-wordmark{display:inline-block;width:7.2em;max-width:100%;aspect-ratio:1692/160;vertical-align:baseline;background-color:currentColor;-webkit-mask:url('../public/assets/wordmark-inline.svg') center/contain no-repeat;mask:url('../public/assets/wordmark-inline.svg') center/contain no-repeat;white-space:nowrap}
+@media print{.bm-site .inline-wordmark{-webkit-print-color-adjust:exact;print-color-adjust:exact}}

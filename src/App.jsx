@@ -1,3 +1,4 @@
+import {brandify} from './InlineWordmark';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowUpRight,ArrowRight,X,MagnifyingGlass,Envelope,Phone} from '@phosphor-icons/react';
 import {products,cases,copy} from './data';
@@ -13,7 +14,7 @@ function Modal({children,onClose,label,title}){
  useEffect(()=>{const previous=document.activeElement;ref.current.showModal();document.body.style.overflow='hidden';return()=>{document.body.style.overflow='';previous?.focus();};},[]);
  return <dialog ref={ref} className="dialog" onCancel={onClose} onClick={e=>{if(e.target===e.currentTarget)onClose();}} aria-label={title||label}><button className="close icon-button" onClick={onClose} aria-label={label}><X size={24}/></button>{children}</dialog>;
 }
-export function App({HeaderComponent=Header,HomeComponent=null,NewsComponent=null,ProjectMapComponent=null,PartnersComponent=null,brandImage='logo-black.svg'}){
+export function App({HeaderComponent=Header,HomeComponent=null,NewsComponent=null,ProjectMapComponent=null,PartnersComponent=null,inlineBrand=false,brandImage='logo-black.svg'}){
  const [lang,setLang]=useState(()=>new URLSearchParams(window.location.search).get('lang')==='en'?'en':'ru');
  const [activeService,setActiveService]=useState(()=>window.location.hash.startsWith('#service-')?window.location.hash.slice(9):null);
  const [filter,setFilter]=useState('all'),[query,setQuery]=useState(''),[product,setProduct]=useState(null),[enquiry,setEnquiry]=useState(null),[prepared,setPrepared]=useState(false);
@@ -26,7 +27,7 @@ export function App({HeaderComponent=Header,HomeComponent=null,NewsComponent=nul
  const visible=products.filter(p=>(filter==='all'||p.category===filter)&&`${p.ru} ${p.en}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
  const ask=(subject='',service=false)=>{setProduct(null);setPrepared(false);setEnquiry({subject,service});};
  function prepare(e){e.preventDefault();const d=new FormData(e.currentTarget);const subject=`${enquiry.service?'Service':'Project'} / ${enquiry.subject||'ГоркиLand'}`;const body=[`${t.name}: ${d.get('name')}`,`${t.contact}: ${d.get('contact')}`,enquiry.subject,enquiry.service?`${t.serial}: ${d.get('serial')||'—'}`:'',d.get('task')].filter(Boolean).join('\n\n');window.location.href=`mailto:sales@gorkiland.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;setPrepared(true);}
- return <>
+ const content=<>
  <a className="skip" href={link('catalog')}>{ru?'Перейти к каталогу':'Skip to catalogue'}</a>
  <HeaderComponent lang={lang} setLang={setLang} onRequest={()=>ask()} onService={setActiveService} home={page==='home'}/>
  <main id="home">
@@ -53,6 +54,7 @@ export function App({HeaderComponent=Header,HomeComponent=null,NewsComponent=nul
  {product&&<Modal onClose={()=>setProduct(null)} label={t.close} title={product[lang]}><div className="product-detail"><img className="detail-photo" src={asset(product.image)} alt={product[lang]}/><div className="detail-copy"><p className="eyebrow">{t.status}</p><h2>{product[lang]}</h2><p>{ru?product.descriptionRu:product.descriptionEn}</p><h3>{t.spec}</h3><dl className="specs">{specs(product.id,lang).map(s=><div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl><p className="muted">{t.specText}</p><a className="text-link small" href={product.source} target="_blank" rel="noreferrer">{t.original}<ArrowUpRight size={17}/></a><button className="button primary" onClick={()=>ask(product[lang])}>{t.request}<ArrowUpRight size={21}/></button></div></div></Modal>}
  {enquiry&&<Modal onClose={()=>setEnquiry(null)} label={t.close} title={enquiry.service?t.formService:t.formTitle}><form className="enquiry" onSubmit={prepare}><p className="eyebrow">ГоркиLand / {enquiry.service?'SERVICE':'PROJECT'}</p><h2>{enquiry.service?t.formService:t.formTitle}</h2>{enquiry.subject&&<p className="enquiry-subject">{enquiry.subject}</p>}<p className="muted">{t.formHelp}</p><label>{t.name}<input name="name" autoComplete="name" required maxLength={120}/></label><label>{t.contact}<input name="contact" autoComplete="email" required maxLength={160}/></label>{enquiry.service&&<label>{t.serial}<input name="serial" maxLength={160}/></label>}<label>{t.task}<textarea name="task" rows={3} required maxLength={2500}/></label><button className="button primary" type="submit">{t.send}<ArrowUpRight size={20}/></button>{prepared&&<p className="prepared" role="status">{t.mailReady}</p>}<p className="form-note">{t.mailNote} <a href="mailto:sales@gorkiland.ru">sales@gorkiland.ru</a></p></form></Modal>}
  </>;
+ return inlineBrand?brandify(content):content;
 }
 
 
