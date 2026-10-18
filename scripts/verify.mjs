@@ -31,3 +31,7 @@ const locations=JSON.parse(await readFile(new URL('../src/project-locations.json
 assert.equal(new Set(locations.map(p=>p.id)).size,locations.length,'Duplicate map location id');
 for(const p of locations){assert.ok(p.description&&p.title,'Missing map description');assert.ok(['wheel','chain','swing','tower','other'].includes(p.category),'Invalid map category');assert.ok(p.coordinates.length===2&&Number.isFinite(p.coordinates[0])&&Number.isFinite(p.coordinates[1])&&Math.abs(p.coordinates[0])<=180&&Math.abs(p.coordinates[1])<=90,'Invalid map coordinates');}
 console.log(`Verified ${locations.length} source-backed map locations.`);
+const {partners}=await import('../src/partners.js');
+assert.equal(new Set(partners.map(p=>p.id)).size,partners.length,'Duplicate partner identifier');
+for(const p of partners){assert.ok(p.ru&&p.en,'Missing partner name');await access(new URL(`../public/assets/partners/${p.image}`,import.meta.url));}
+console.log(`Verified ${partners.length} partner names and source logo assets.`);

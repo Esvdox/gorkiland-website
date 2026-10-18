@@ -1,3 +1,4 @@
+import {Partners} from './PartnerGrid';
 import {NewsSection} from './NewsSection';
 import {ArrowDown,ArrowUpRight} from '@phosphor-icons/react';
 import {useEffect} from 'react';
@@ -23,9 +24,12 @@ export function BmHome({lang,link}){
   <section className="bm-project-preview" aria-labelledby="bm-project-title"><div className="bm-preview-heading"><h2 id="bm-project-title">{ru?'Движение в деталях.':'Motion in every detail.'}</h2><a className="text-link" href={link('projects')}>{ru?'Все проекты':'All projects'}<ArrowUpRight size={20}/></a></div><div className="bm-preview-grid"><a href={link('projects')}><img src={asset('orion.webp')} loading="lazy" alt={ru?'Цепочная карусель в парке «Орион»':'Elevating swing ride at Orion Park'} width="1214" height="763"/><p>{ru?'Парк «Орион»':'Orion Park'}<ArrowUpRight size={24}/></p><span>{ru?'Цепочная карусель с подъёмом':'Elevating swing ride'}</span></a><a href={link('manufacturing')}><img src={asset('photo-8.webp')} loading="lazy" alt={ru?'Разработка пассажирских модулей на производстве ГоркиLand':'Passenger module development at ГоркиLand'} width="1000" height="900"/><p>{ru?'От идеи — к изделию':'From idea to product'}<ArrowUpRight size={24}/></p><span>{ru?'Разработка и производство':'Engineering and manufacturing'}</span></a></div></section>
   <a className="bm-geography-entry" href={`?page=projects&lang=${lang}#project-map`}><span>{ru?'География проектов':'Project locations'}</span><span>{ru?'70 объектов на карте':'70 mapped locations'}</span><ArrowUpRight size={28}/></a>
     <NewsSection lang={lang} compact/>
+    <Partners lang={lang}/>
   <div className="bm-parks"><p>{ru?'Больше, чем отдельный аттракцион.':'More than an individual ride.'}</p><a href={link('solutions')}>{ru?'Парки и тематические пространства':'Parks and themed spaces'}<ArrowUpRight size={28}/></a></div>
  </>;
 }
+
+
 
 
 
