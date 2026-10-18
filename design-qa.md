@@ -106,3 +106,19 @@ final result: passed
 ## 18.10.2026 — approved hero statement
 
 User replaced headline verbatim with «ИНЖЕНЕРИЯ ДВИЖЕНИЯ. АРХИТЕКТУРА ВПЕЧАТЛЕНИЙ». This explicit text correction supersedes prior mock copy. Implemented uppercase as supplied, two phrase lines on desktop and natural four word lines on390px mobile. English equivalent updated. Desktop and mobile screenshots inspected: no overflow, full-height hero preserved; source photo, colors and logo unchanged. Vite build passed. final result: passed
+
+## 18.10.2026 — new Site №2 monochrome logo
+
+User target: third supplied crop `codex-clipboard-7cf1ce30-cc67-4cfc-8338-7149320b388b.png`, shown alongside five related references. Brief playback explicitly selected this compact trajectory mark/minimal wordmark for the header; user requested proceeding in this direction. Target supersedes the earlier coaster-on-supports lockup for Site №2 only.
+
+Implementation assets: brand-motion-black.svg and brand-motion-white.svg, automatic Potrace conversion of supplied artwork, not hand-drawn paths or new AI logo geometry. Source crop preserved privately in parent outputs/gorkiland-brand-motion-2026-10-18/user-reference.png.
+
+Comparison evidence: reference-vector-comparison.png combines normalized thresholded source and vector silhouette at equal960px width. Opened and reviewed. Monochrome-logo-preview.png shows black and white executions. Original reference365×88; traced artwork viewBox2406×329 including small safe padding. Proportional normalization only, no stretching.
+
+Website evidence: site-desktop.png, site-light-header.png, site-mobile.png in the same parent output directory. Desktop native1265×712 / mobile390×844 checked. White logo on hero, black logo in open menu/light header, black footer logo confirmed from rendered DOM. Header placement and logo size preserve the established site layout.
+
+Required surfaces: outlined source lettering retained; no external font required for the logo; two trajectory ribbons and wordmark spacing retained; black#0b1014 / white#ffffff; source gradients removed by monochrome conversion; no tagline at small sizes. Existing fullscreen headline, copy, colors and imagery unchanged. No visible P0/P1/P2 mismatch; small corner smoothing from tracing is intentional and visible in combined comparison.
+
+Local Site №1 reopened and retains its original header, hero and four entrances. Original logo asset files unchanged. Browser error log empty. Content/asset verification passed; both entries build; packaging tests4/4 passed. New brand applied to Site №2 header and footer, no video replacement.
+
+final result: passed

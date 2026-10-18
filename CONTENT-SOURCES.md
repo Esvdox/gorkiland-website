@@ -29,3 +29,7 @@
 Логотип создан через ImageGen по брифу, с учётом структурного принципа инженерного бренда из референса INTAMIN; выбран заказчиком 17.10.2026. Исходный логотип INTAMIN не входит в этот репозиторий. Финальные векторные файлы получены автоматической трассировкой утверждённого изображения. Проверка сходства и регистрация товарного знака не проводились.
 
 Официальный PDF на Яндекс Диске не прочитан: требуется активная пользовательская сессия. Непроверенные сведения из него не использованы.
+
+## Site №2 logo — 18.10.2026
+
+The user supplied a new trajectory-symbol / minimal wordmark direction. `brand-motion-black.svg` and `brand-motion-white.svg` are automatic vector traces of the third supplied monochrome artwork (reference crop codex-clipboard-7cf1ce30-cc67-4cfc-8338-7149320b388b.png), with a transparent background and solid fills. No red or metallic effects; no microtagline. Used only in Site №2 header and footer. Previous logo files are retained for Site №1. The vector contains outlined lettering and does not rely on a visitor having a particular font installed.

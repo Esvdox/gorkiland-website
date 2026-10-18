@@ -27,7 +27,7 @@ export function BmHeader({lang,setLang,onRequest,onService,home}){
  const light=!home||scrolled||open;
  return <>
   <header className={`bm-header ${light?'is-light':''} ${open?'is-open':''}`}>
-   <a href={`?lang=${lang}`} className="bm-brand" aria-label="ГоркиLand"><img src={asset(light?'logo-black.svg':'logo.svg')} alt="ГоркиLand — инжиниринг и аттракционы" width="434" height="145"/></a>
+   <a href={`?lang=${lang}`} className="bm-brand" aria-label="ГоркиLand"><img src={asset(light?'brand-motion-black.svg':'brand-motion-white.svg')} alt="ГоркиLand" width="2400" height="340"/></a>
    <div className="bm-header-controls"><button ref={trigger} className="bm-menu-trigger" aria-expanded={open} aria-controls="bm-navigation" onClick={()=>setOpen(!open)}>{ru?'Меню':'Menu'}{open?<Minus size={23}/>:<Plus size={23}/>}</button><div className="bm-languages" aria-label={ru?'Язык сайта':'Site language'}>{['ru','en'].map(l=><button key={l} lang={l} aria-pressed={lang===l} onClick={()=>setLang(l)}>{l.toUpperCase()}</button>)}</div></div>
   </header>
   {open&&<div className="bm-menu-layer"><button className="bm-menu-backdrop" aria-label={ru?'Закрыть меню':'Close menu'} onClick={close} tabIndex={-1}/><nav ref={panel} className="bm-menu-panel" id="bm-navigation" aria-label={ru?'Основная навигация':'Main navigation'}>

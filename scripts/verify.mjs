@@ -12,7 +12,7 @@ for(const p of products){
 }
 for(const c of cases)await access(new URL(`../public/assets/${c.image}`,import.meta.url));
 assert.deepEqual(Object.keys(copy.ru).sort(),Object.keys(copy.en).sort(),'Translation keys differ');
-for(const file of ['hero.webp','logo.svg','logo-black.svg','logo-white.png'])await access(new URL(`../public/assets/${file}`,import.meta.url));
+for(const file of ['hero.webp','logo.svg','logo-black.svg','logo-white.png','brand-motion-black.svg','brand-motion-white.svg'])await access(new URL(`../public/assets/${file}`,import.meta.url));
 const svg=await readFile(new URL('../public/assets/logo.svg',import.meta.url),'utf8');
 assert.ok(svg.includes('<svg')&&!svg.includes('<script'),'Invalid logo');
 assert.equal(new Set(services.map(s=>s.id)).size,services.length,'Duplicate service anchors');
