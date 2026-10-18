@@ -131,3 +131,8 @@ Visual evidence: parent outputs/gorkiland-brand-motion-2026-10-18/two-lines-mobi
 
 Vite build passed. Both logo output files refreshed. No changes to Site№1 branding.
 final result: passed
+
+
+## 18.10.2026 — header logo scaled1.5
+
+Explicit user scale request applied to Site№2 header identity including its subtitle: base350→525px, tablet280→420px, mobile172→258px, narrow155→232.5px. Image container height also52→78px and44→66px. Header vertical padding adapted to preserve desktop/tablet navigation. On phones the controls occupy a second row and menu offsets follow the129px header. Browser desktop1265×712 and narrow320×760 opened and inspected; no overflow or overlap; narrow logo width232.5px verified. Evidence: outputs/gorkiland-brand-motion-2026-10-18/logo-150-desktop.png in parent workspace; mobile view inspected. No changes to logo geometry, color, subtitle wording or Site№1. Vite build passed; original source/logo-size difference is intentional explicit feedback. final result: passed
