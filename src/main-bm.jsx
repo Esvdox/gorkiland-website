@@ -4,9 +4,11 @@ import {App} from './App';
 import {BmHeader} from './BmHeader';
 import {BmHome} from './BmHome';
 import {NewsSection} from './NewsSection';
+import {ProjectMap} from './ProjectMap';
 import './styles.css';
 import './refinements.css';
 import './bm.css';
 import './typography.css';
-createRoot(document.getElementById('root')).render(<React.StrictMode><div className="bm-site"><App HeaderComponent={BmHeader} HomeComponent={BmHome} NewsComponent={NewsSection} brandImage="brand-motion-black.svg"/></div></React.StrictMode>);
+createRoot(document.getElementById('root')).render(<React.StrictMode><div className="bm-site"><App HeaderComponent={BmHeader} HomeComponent={BmHome} NewsComponent={NewsSection} ProjectMapComponent={ProjectMap} brandImage="brand-motion-black.svg"/></div></React.StrictMode>);
+
 

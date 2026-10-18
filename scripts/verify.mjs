@@ -27,3 +27,7 @@ for(const file of ['App.jsx','Header.jsx','BmHeader.jsx','BmHome.jsx']){
 }
 console.log(`Verified ${products.length} ride families, ${cases.length} cases, RU/EN content, specifications and local assets.`);
 console.log(`Verified ${services.length} bilingual service scopes and unique navigation anchors.`);
+const locations=JSON.parse(await readFile(new URL('../src/project-locations.json',import.meta.url),'utf8'));
+assert.equal(new Set(locations.map(p=>p.id)).size,locations.length,'Duplicate map location id');
+for(const p of locations){assert.ok(p.description&&p.title,'Missing map description');assert.ok(['wheel','chain','swing','tower','other'].includes(p.category),'Invalid map category');assert.ok(p.coordinates.length===2&&Number.isFinite(p.coordinates[0])&&Number.isFinite(p.coordinates[1])&&Math.abs(p.coordinates[0])<=180&&Math.abs(p.coordinates[1])<=90,'Invalid map coordinates');}
+console.log(`Verified ${locations.length} source-backed map locations.`);
