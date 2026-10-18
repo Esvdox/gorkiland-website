@@ -23,3 +23,5 @@
 /* Wordmark in flowing copy: current text color, no emblem/tagline, proportional to its line. */
 .bm-site .inline-wordmark{display:inline-block;width:7.2em;max-width:100%;aspect-ratio:1692/160;vertical-align:baseline;background-color:currentColor;-webkit-mask:url('../public/assets/wordmark-inline.svg') center/contain no-repeat;mask:url('../public/assets/wordmark-inline.svg') center/contain no-repeat;white-space:nowrap}
 @media print{.bm-site .inline-wordmark{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.bm-site .inline-wordmark::after{content:'';position:absolute;inset:0;background:#d6f025;-webkit-mask:url('../public/assets/wordmark-accent.svg') center/contain no-repeat;mask:url('../public/assets/wordmark-accent.svg') center/contain no-repeat}
+.bm-site .inline-wordmark{position:relative}
